@@ -45,7 +45,7 @@ const DigitalPaajiHero = () => {
     <div className="flex w-full bg-[#050505] min-h-screen font-sans relative no-scrollbar overflow-hidden">
       
      <div className="absolute  top-1 md:top-5 right-1 md:right-5  z-[99]">
-      <img src="/Images/bnilogo.png" alt="BNI " className=" h-10 md:h-20 w-full"  />
+      <img src="/Images/bnired.png" alt="BNI " className=" h-10 md:h-20 w-full"  />
      </div>
         <div className="absolute inset-0 z-0 flex items-center opacity-30 pointer-events-none">
             <motion.div 

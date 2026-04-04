@@ -18,7 +18,7 @@ const Graphic = () => {
     "Products",
     "education",
     "printing",
-    // "Menu"
+    "Menu"
   ];
 
   const data = [
@@ -146,13 +146,13 @@ const Graphic = () => {
       gallery: [
         { type: "image", url: "/Images/portfolio/graphic/label/11.webp" },
         { type: "image", url: "/Images/portfolio/graphic/visitingcard/1.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/visitingcard/2.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/visitingcard/5.webp" },
+        // { type: "image", url: "/Images/portfolio/graphic/visitingcard/2.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/visitingcard/ibanta.webp" },
         { type: "image", url: "/Images/portfolio/graphic/visitingcard/4.webp" },
         { type: "image", url: "/Images/portfolio/graphic/visitingcard/6.webp" },
         { type: "image", url: "/Images/portfolio/graphic/visitingcard/7.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/visitingcard/8.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/visitingcard/9.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/visitingcard/royalpalm.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/visitingcard/santosh.webp" },
       ],
     },
     {
@@ -160,6 +160,11 @@ const Graphic = () => {
       category: "Packaging Designs",
       coverImg: "/Images/portfolio/packaging/3.webp",
       gallery: [
+               { type: "image", url: "/Images/portfolio/graphic/label/p2.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/label/p3.webp" },
+
+        { type: "image", url: "/Images/portfolio/graphic/label/p1.webp" },
+
         { type: "image", url: "/Images/portfolio/graphic/label/9.webp" },
 
         { type: "image", url: "/Images/portfolio/graphic/label/12.webp" },
@@ -189,9 +194,6 @@ const Graphic = () => {
         // { type: "image", url: "/Images/portfolio/graphic/label/1.webp" },
         { type: "image", url: "/Images/portfolio/graphic/packaging/4.webp" },
 
-        { type: "image", url: "/Images/portfolio/graphic/label/2.webp" },
-
-        { type: "image", url: "/Images/portfolio/graphic/label/5.webp" },
 
         { type: "image", url: "/Images/portfolio/graphic/label/label6.webp" },
       ],
@@ -203,9 +205,11 @@ const Graphic = () => {
       coverImg: "/Images/portfolio/packaging/3.webp",
       gallery: [
         { type: "image", url: "/Images/portfolio/graphic/product/saajriwaaj.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/label/daf.webp" },
+
        
-{ type: "image", url: "/Images/portfolio/graphic/product/prodso.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/label/8.webp" },
+{ type: "image", url: "/Images/portfolio/graphic/label/prodsol.webp" },
+        // { type: "image", url: "/Images/portfolio/graphic/label/8.webp" },
          { type: "image", url: "/Images/portfolio/graphic/label/10.webp" },
         { type: "image", url: "/Images/portfolio/graphic/label/logo.webp" },
       
@@ -213,11 +217,7 @@ const Graphic = () => {
         { type: "image", url: "/Images/portfolio/graphic/label/logo1.webp" },
        
         { type: "image", url: "/Images/portfolio/graphic/label/cover.webp" },
-        {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Food-Menu-Black/",url:"/Images/thumbnail/oasis3.webp" },
-        {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Jaggi-Resorts_compressed/",url:"/Images/thumbnail/oasis4.webp" },
-        {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Shaurya-Menu-compressed/",url:"/Images/thumbnail/oasis5.webp" },
-        
-        { type: "image", url: "/Images/portfolio/graphic/label/cover1.webp" },
+           { type: "image", url: "/Images/portfolio/graphic/label/cover1.webp" },
         
          // { type: "image", url: "/Images/portfolio/graphic/label/logo2.webp" },
         // { type: "image", url: "/Images/thumbnail/logo1.webp" },
@@ -303,12 +303,12 @@ const Graphic = () => {
         { type: "image", url: "/Images/portfolio/graphic/product/ibnta1.webp" },
         { type: "image", url: "/Images/portfolio/graphic/product/liqa1.webp" },
         { type: "image", url: "/Images/portfolio/graphic/product/liqa2.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/product/liqa3.webp" },
+        // { type: "image", url: "/Images/portfolio/graphic/product/liqa3.webp" },
         { type: "image", url: "/Images/portfolio/graphic/product/liqa5.webp" },
         { type: "image", url: "/Images/portfolio/graphic/product/liqa6.webp" },
         { type: "image", url: "/Images/portfolio/graphic/product/liqa7.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/product/goyal1.webp" },
-        { type: "image", url: "/Images/portfolio/graphic/product/goyal2.webp" },
+        // { type: "image", url: "/Images/portfolio/graphic/product/goyal1.webp" },
+        // { type: "image", url: "/Images/portfolio/graphic/product/goyal2.webp" },
       ],
     },
     {
@@ -336,12 +336,16 @@ const Graphic = () => {
         { type: "image", url: "/Images/portfolio/graphic/restraurant/28.webp" },
       ],
     },
-    // { id: 12,
-    //   category: "Menu",
-    // gallery: [
-
-    // ]
-    // }
+    { id: 12,
+      category: "Menu",
+    gallery: [
+ {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Food-Menu-Black/",url:"/Images/thumbnail/oasis3.webp" },
+        {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Jaggi-Resorts_compressed/",url:"/Images/thumbnail/oasis4.webp" },
+        {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Shaurya-Menu-compressed/",url:"/Images/thumbnail/oasis5.webp" },
+        
+    
+    ]
+    }
   ];
   const containerVariants = {
     hidden: { opacity: 0 },
