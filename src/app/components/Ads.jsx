@@ -5,27 +5,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Maximize2, X } from 'lucide-react';
 
 const Ads = () => {
-  const data = {
-    id: 9,
-    category: "Ad Results(Marketing)",
-    coverImg:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    gallery: [
-      {
-        type: "image",
-        url: "/Images/portfolio/ad/1.webp",
-      },
-      {
-        type: "image",
-        url: "/Images/portfolio/ad/2.webp",
-      },
-      {
-        type: "image",
-        url: "/Images/portfolio/ad/3.webp",
-      },
+  // const data = {
+  //   id: 9,
+  //   category: "Ad Results(Marketing)",
+  //   coverImg:
+  //     "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+  //   gallery: [
+  //     {
+  //       type: "image",
+  //       url: "/Images/portfolio/ad/1.webp",
+  //     },
+  //     {
+  //       type: "image",
+  //       url: "/Images/portfolio/ad/2.webp",
+  //     },
+  //     {
+  //       type: "image",
+  //       url: "/Images/portfolio/ad/3.webp",
+  //     },
 
-    ],
-  };
+  //   ],
+  // };
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -57,9 +57,23 @@ const Ads = () => {
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1  gap-6 md:gap-8"
         >
-          {data.gallery.map((asset, index) => (
+
+          <div  className='h-[70vh] '>
+  
+     
+
+
+       <iframe 
+                      src="https://online.fliphtml5.com/jbrzt/Food-Menu-Black/"
+                      className="w-full h-full bg-black"
+                   title="Food Menu Black" seamless="seamless" scrolling="no" frameBorder="0" allowtransparency="true" allowfullscreen="true"
+                    />
+     
+     
+     </div>
+          {/* {data.gallery.map((asset, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -67,7 +81,6 @@ const Ads = () => {
               className="group relative overflow-hidden rounded-xl cursor-pointer bg-black/20 border border-white/10 shadow-lg "
               onClick={() => setSelectedImage(asset)}
             >
-              {/* object-top ensures we see the top of long website mockups in the thumbnail */}
               <img
                 src={asset.url}
                 className="w-full h-full md:grayscale hover:grayscale-0 transition-all duration-700 object- "
@@ -75,19 +88,18 @@ const Ads = () => {
                 loading="lazy"
               />
               
-              {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex justify-center items-center pointer-events-none">
                 <div className="opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300 bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 shadow-xl">
                   <Maximize2 strokeWidth={2} className="w-6 h-6 text-white" />
                 </div>
               </div>
             </motion.div>
-          ))}
+          ))} */}
         </motion.div>
       </div>
 
       {/* FULL SCREEN MODAL */}
-    <AnimatePresence>
+    {/* <AnimatePresence>
         {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -126,7 +138,7 @@ const Ads = () => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

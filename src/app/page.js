@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const DigitalPaajiHero = () => {
@@ -22,8 +21,6 @@ const DigitalPaajiHero = () => {
 
   return (
     <section className="relative min-h-screen w-full bg-[#03030379] text-white overflow-hidden font-sans flex flex-col justify-center items-center">
-      
-      {/* === INFINITE HORIZONTAL SCROLL BACKGROUND === */}
       <div className="absolute inset-0 z-0 flex items-center opacity-30 pointer-events-none">
         <motion.div 
           className="flex whitespace-nowrap gap-4"
@@ -31,7 +28,7 @@ const DigitalPaajiHero = () => {
             x: ["0%", "-50%"],
           }}
           transition={{
-            duration: 30, // Adjust speed here
+            duration: 30, 
             ease: "linear",
             repeat: Infinity,
           }}
@@ -51,9 +48,7 @@ const DigitalPaajiHero = () => {
           ))}
         </motion.div>
 
-        {/* Masking overlays to fade edges and keep text readable */}
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#030303] via-transparent to-[#030303] z-10" /> */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-[#030303] via-[#030303]/40 to-[#030303] z-10" /> */}
+     
       </div>
 
       {/* === CONTENT LAYER === */}
@@ -96,22 +91,7 @@ const DigitalPaajiHero = () => {
             </span>
           </motion.h1>
 
-          {/* <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-gray-400 text-sm md:text-lg max-w-xl mx-auto font-light"
-          >
-           We help brands stand out, scale faster, and connect better —
-
- through strategy, creativity, and execution that works.
-
-
-
- Don’t just take our word for it.
-
- See what we’ve built.
-          </motion.p> */}
+     
         </div>
 
         <motion.div
@@ -135,10 +115,7 @@ const DigitalPaajiHero = () => {
         </motion.div>
       </div> 
 
-      {/* Subtle Grain & Ambient Glow */}
-      {/* <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" /> */}
-      {/* <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_transparent_20%,_#030303_90%)] z-[5]" /> */}
-    </section>
+      </section>
   );
 };
 

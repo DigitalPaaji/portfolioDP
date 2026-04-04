@@ -1,16 +1,17 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AiVideo from "../components/AiVideo";
 import  Animation from "../components/Animation"
 import Website from "../components/Website";
 import Ads from "../components/Ads";
 import Graphic from "../components/Graphic";
 import Reels from "../components/Reels";
-import { ChevronsDown, ListFilter, Undo2, X } from "lucide-react";
+import { ChevronsDown, ListFilter, X } from "lucide-react";
+import Bni from "../components/Bni";
 
 
 
@@ -22,7 +23,8 @@ const DigitalPaajiHero = () => {
     "Animation",
     "Graphic",
     "Website UI/UX",
-    "Ad Results",
+    // "Menu Cards",
+    "BNI"
   ];
 
   const [select, setSelect] = useState("");
@@ -39,25 +41,12 @@ const DigitalPaajiHero = () => {
 
 
   return (
-    // 1. REMOVED overflow-hidden entirely from this top wrapper.
+  
     <div className="flex w-full bg-[#050505] min-h-screen font-sans relative no-scrollbar overflow-hidden">
       
-      {/* === BACKGROUND GIF LAYER === */}
-      {/* 2. Added overflow-hidden ONLY to the background layer so blurs don't cause horizontal scroll */}
-      {/* <div className="absolute top-0 left-0 w-full h-full z-0 opacity-30 md:opacity-40 pointer-events-none overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full bg-no-repeat bg-center bg-cover"
-          style={{
-            backgroundImage: `url('/banner1.gif')`,
-            maskImage: "radial-gradient(circle at center, black 20%, transparent 60%)",
-            WebkitMaskImage: "radial-gradient(circle at center, black 20%, transparent 80%)",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
-        
-        <div className="absolute top-1/2 left-0 w-64 md:w-[500px] h-64 md:h-[500px] bg-[#cc5f4d]/10 blur-[120px] md:blur-[180px] -translate-x-1/2 pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-64 md:w-[500px] h-64 md:h-[500px] bg-[#cc5f4d]/5 blur-[120px] md:blur-[180px] translate-x-1/4 pointer-events-none" />
-      </div> */}
+     <div className="absolute  top-1 md:top-5 right-1 md:right-5  z-[99]">
+      <img src="/Images/bnilogo.png" alt="BNI " className=" h-10 md:h-20 w-full"  />
+     </div>
         <div className="absolute inset-0 z-0 flex items-center opacity-30 pointer-events-none">
             <motion.div 
               className="flex whitespace-nowrap gap-4"
@@ -65,7 +54,7 @@ const DigitalPaajiHero = () => {
                 x: ["0%", "-50%"],
               }}
               transition={{
-                duration: 20, // Adjust speed here
+                duration: 20,
                 ease: "linear",
                 repeat: Infinity,
               }}
@@ -234,13 +223,12 @@ const DigitalPaajiHero = () => {
               {select === "AI Videos" && <AiVideo />}
               {select === "Animation" && <Animation />}
               {select === "Website UI/UX" && <Website />}
-              {select === "Ad Results" && <Ads />}
+              {select === "Menu Cards" && <Ads />}
               {select === "Graphic" && <Graphic />}
+              {select === "BNI" && <Bni />}
     
               {select === "Reels Creation" && <Reels /> }
-         {/*              
-              
-              <div className="mt-auto  text-white/20">Scroll down to see menu stick</div>  */}
+         
             </motion.div>
           )}
         </AnimatePresence>

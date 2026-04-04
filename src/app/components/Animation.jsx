@@ -1,6 +1,6 @@
 "use client";
 
-import { Play, X } from 'lucide-react';
+import { Play, StepBack, StepForward, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -16,23 +16,18 @@ const Animation = () => {
       {type:"video",url:"https://www.youtube.com/embed/zzl9yiB2qqQ",thumb:"ibnta5.webp"},
       {type:"video",url:"https://www.youtube.com/embed/3iuLOyu6SFk",thumb:"shangz1.webp"},
       {type:"video",url:"https://www.youtube.com/embed/wrENWvcGpLM",thumb:"wedding1.webp"},
-       {type:"video",url:"https://www.youtube.com/embed/WHcWzNiP40o",thumb:"ibnta6.webp"},
+       {type:"video",url:"https://www.youtube.com/embed/MwY68_ujkPM",thumb:"education5.webp"},
+      {type:"video",url:"https://www.youtube.com/embed/WHcWzNiP40o",thumb:"ibnta6.webp"},
+    {type:"video",url:"https://www.youtube.com/embed/CbKtunhurCg",thumb:"oasis2.webp"},
+      {type:"video",url:"https://www.youtube.com/embed/L9a9YsVXJho",thumb:"electronic1.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/v23XZlcVXvI",thumb:"electronic2.webp"},
     
-       
-       
-      
-       
-  
-  
-
-
     ],
   };
 
   const [selectedAsset, setSelectedAsset] = useState(null);
 
   useEffect(() => {
-    // Prevent background scrolling when modal is open
     document.body.style.overflow = selectedAsset ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
   }, [selectedAsset]);
@@ -48,9 +43,21 @@ const Animation = () => {
     return url;
   };
 
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setSelectedAsset((prev) => (prev + 1) % aivideos.gallery.length);
+  };
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    setSelectedAsset((prev) => (prev - 1 + aivideos.gallery.length) % aivideos.gallery.length);
+  };
+
+
   return (
     <div className='relative w-full h-[78vh] overflow-auto scroll-smooth  no-scrollbar '>
-      {/* GRID SECTION */}
+   
       <div className="w-full pb-20">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -66,7 +73,7 @@ const Animation = () => {
               transition={{ delay: index * 0.05, duration: 0.4 }}
               whileHover={{ y: -5, scale: 1.02 }}
               className="group relative overflow-hidden rounded-xl cursor-pointer bg-black/20 border border-white/10 shadow-lg aspect-[9/16]"
-              onClick={() => setSelectedAsset(asset)}
+              onClick={() => setSelectedAsset(index)}
             >
               {asset.type === 'image' ? (
                 <img
@@ -117,24 +124,33 @@ const Animation = () => {
 
       
       <AnimatePresence>
-        {selectedAsset && (
+        {selectedAsset !==null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[9999] w-full h-screen flex items-center justify-center bg-black/95 backdrop-blur-xl"
-            onClick={() => setSelectedAsset(null)}
           >
-            {/* Close Button */}
             <button 
               className="absolute top-6 right-6 md:top-10 md:right-10 text-white/60 hover:text-white z-50 bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
               onClick={() => setSelectedAsset(null)}
             >
               <X size={32} strokeWidth={2} />
             </button>
-
-            {/* FULL SCREEN CONTENT */}
+ <button 
+              className="absolute top-1/2 right-6  md:right-10 text-white/60 hover:text-white z-50 bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+            onClick={handleNext}
+            >
+              <StepForward size={25} strokeWidth={2} />
+            </button>
+          <button 
+              className="absolute top-1/2 left-6  md:left-10 text-white/60 hover:text-white z-50 bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+           onClick={handlePrev}
+            >
+              <StepBack size={25} strokeWidth={2} />
+            </button>
+       
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -143,24 +159,24 @@ const Animation = () => {
               className="relative w-full h-full max-w-7xl max-h-screen p-4 md:p-12 flex justify-center items-center"
               onClick={(e) => e.stopPropagation()} 
             >
-              {selectedAsset.type === 'image' ? (
+              {aivideos.gallery[selectedAsset].type === 'image' ? (
                 <img
-                  src={selectedAsset.url}
+                  src={aivideos.gallery[selectedAsset].url}
                   className="w-full h-full object-contain"
                   alt="Full screen content"
                 />
               ) : (
                 <div className=" h-screen flex justify-center items-center bg-black rounded-lg overflow-hidden shadow-2xl">
-                  {(selectedAsset.url.includes("youtube.com") || selectedAsset.url.includes("instagram.com")) ? (
+                  {(aivideos.gallery[selectedAsset].url.includes("youtube.com") || aivideos.gallery[selectedAsset].url.includes("instagram.com")) ? (
                     <iframe
-                      src={getModalVideoUrl(selectedAsset.url)}
+                      src={getModalVideoUrl(aivideos.gallery[selectedAsset].url)}
                       className="w-full h-full"
                       allow="autoplay; encrypted-media; picture-in-picture"
                       allowFullScreen
                     />
                   ) : (
                     <video
-                      src={selectedAsset.url}
+                      src={aivideos.gallery[selectedAsset].url}
                       controls
                       autoPlay
                       loop

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Maximize2, X } from 'lucide-react';
+import { Maximize2, StepBack, StepForward, X } from 'lucide-react';
 
 const Website = () => {
   const data = {
@@ -33,7 +33,7 @@ const Website = () => {
     return () => { document.body.style.overflow = 'unset'; };
   }, [selectedImage]);
 
-  // Framer Motion Variants for smooth staggered loading
+
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -46,7 +46,15 @@ const Website = () => {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
   };
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setSelectedImage((prev) => (prev + 1) % data.gallery.length);
+  };
 
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    setSelectedImage((prev) => (prev - 1 + data.gallery.length) % data.gallery.length);
+  };
   return (
     <div className='relative w-full h-[78vh] overflow-auto scroll-smooth  no-scrollbar'>
       {/* GRID SECTION */}
@@ -63,9 +71,9 @@ const Website = () => {
               variants={itemVariants}
              
               className="group relative overflow-hidden rounded-xl cursor-pointer bg-black/20 border border-white/10 shadow-lg "
-              onClick={() => setSelectedImage(asset)}
+              onClick={() => setSelectedImage(index)}
             >
-              {/* object-top ensures we see the top of long website mockups in the thumbnail */}
+             
               <img
                 src={asset.url}
                 className="w-full h-full md:grayscale hover:grayscale-0 transition-all duration-700 object- "
@@ -86,7 +94,7 @@ const Website = () => {
 
       {/* FULL SCREEN MODAL */}
     <AnimatePresence>
-        {selectedImage && (
+        {selectedImage !==null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -103,7 +111,23 @@ const Website = () => {
             >
               <X size={32} strokeWidth={2} />
             </button>
+          <button 
+              className="absolute top-1/2 right-6  md:right-10 text-white/60 hover:text-white z-50 bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+            onClick={handleNext}
+            >
+              <StepForward size={25} strokeWidth={2} />
+            </button>
 
+
+
+          <button 
+              className="absolute top-1/2 left-6  md:left-10 text-white/60 hover:text-white z-50 bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+           onClick={handlePrev}
+             
+            >
+            
+              <StepBack size={25} strokeWidth={2} />
+            </button>
          
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
@@ -115,7 +139,7 @@ const Website = () => {
               onClick={(e) => e.stopPropagation()} 
             >
               <img
-                src={selectedImage.url}
+                src={data.gallery[selectedImage].url}
                 // object-contain ensures the whole width fits, but if it's super tall, the user might want to scroll it.
                 // Using max-h-full keeps it entirely within the viewport. Change to h-auto if you prefer them to scroll long pages.
                 className="w-full h-[80%] object-contain rounded-lg shadow-2xl"
