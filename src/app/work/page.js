@@ -108,7 +108,7 @@ const DigitalPaajiHero = () => {
                 width={2648}
                 height={984}
                 className="w-full h-auto"
-                priority
+              
               />
             </Link>
           </motion.div>

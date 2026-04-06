@@ -12,53 +12,94 @@ const data = {
     gallery: [
       { 
         thumb: "/Images/portfolio/website/m.webp", // Usually a cropped/smaller version
-        full: "/Images/portfolio/website/1.webp"   // The full high-res design
+       full: "/Images/digimagnifiko.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/1.webp"   // The full high-res design
+      },
+        { 
+        thumb: "/Images/portfolio/website/sr.webp", 
+       full: "/Images/sr.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/13.webp" 
+      },
+   { 
+        thumb: "/Images/portfolio/website/dp.webp", 
+       full: "/Images/dp.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/5.webp" 
+      },
+      
+      
+      
+      { 
+        thumb: "/Images/portfolio/website/begum.webp", 
+       full: "/Images/begum.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/13.webp" 
+      },
+   { 
+        thumb: "/Images/portfolio/website/dpa.webp", 
+       full: "/Images/dpa.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/5.webp" 
+      },
+            { 
+        thumb: "/Images/portfolio/website/rp.webp", 
+       full: "/Images/rp.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/10.webp" 
       },
       { 
+        thumb: "/Images/portfolio/website/f.webp", 
+       full: "/Images/fleet.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/11.webp" 
+      },
+            { 
         thumb: "/Images/portfolio/website/sms.webp", 
-        full: "/Images/portfolio/website/7.webp" 
+       full: "/Images/sms.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/7.webp" 
       },
       { 
         thumb: "/Images/portfolio/website/p.webp", 
-        full: "/Images/portfolio/website/9.webp" 
-      },
-   
+       full: "/Images/p.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/9.webp" 
+      },   
       { 
-        thumb: "/Images/portfolio/website/11.webp", 
-        full: "/Images/portfolio/website/11.webp" 
+        thumb: "/Images/portfolio/website/c.webp", 
+       full: "/Images/c.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/12.webp" 
+      },      { 
+        thumb: "/Images/portfolio/website/hammer.webp", 
+       full: "/Images/hammer.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/4.webp" 
       },
-      { 
-        thumb: "/Images/portfolio/website/sr.webp", 
-        full: "/Images/portfolio/website/12.webp" 
+
+          { 
+        thumb: "/Images/portfolio/website/k.webp", 
+       full: "/Images/k.pdf",
+  type: "pdf"
+        // full: "/Images/portfolio/website/3.webp" 
       },
-      { 
-        thumb: "/Images/portfolio/website/13.webp", 
-        full: "/Images/portfolio/website/13.webp" 
-      },
-      { 
-        thumb: "/Images/portfolio/website/2.webp", 
-        full: "/Images/portfolio/website/2.webp" 
-      },
-      { 
-        thumb: "/Images/portfolio/website/3.webp", 
-        full: "/Images/portfolio/website/3.webp" 
-      },
-      { 
-        thumb: "/Images/portfolio/website/4.webp", 
-        full: "/Images/portfolio/website/4.webp" 
-      },
-      { 
-        thumb: "/Images/portfolio/website/5.webp", 
-        full: "/Images/portfolio/website/5.webp" 
-      },
-      { 
-        thumb: "/Images/portfolio/website/6.webp", 
-        full: "/Images/portfolio/website/6.webp" 
-      },
-         { 
-        thumb: "/Images/portfolio/website/10.webp", 
-        full: "/Images/portfolio/website/10.webp" 
-      },
+
+  //     { 
+  //       thumb: "/Images/portfolio/website/2.webp", 
+  //     //  full: "/Images/fleet.pdf",
+  // type: "pdf",
+  //       full: "/Images/portfolio/website/2.webp" 
+  //     },
+
+  //     { 
+  //       thumb: "/Images/portfolio/website/6.webp", 
+  //     //  full: "/Images/fleet.pdf",
+  // type: "pdf",
+  //       full: "/Images/portfolio/website/6.webp" 
+  //     },
+
     ],
   };
   const [selectedImage, setSelectedImage] = useState(null);
@@ -160,11 +201,23 @@ const data = {
               onClick={(e) => e.stopPropagation()} 
             >
               {/* SHOW FULL IMAGE HERE */}
-              <img
+              {/* <img
                 src={data.gallery[selectedImage].full}
                 className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
                 alt="Full Resolution View"
-              />
+              /> */}
+              {data.gallery[selectedImage].type === "pdf" ? (
+  <iframe
+    src={`${data.gallery[selectedImage].full}#toolbar=0`} 
+    className="w-full h-[85vh] rounded-lg shadow-2xl"
+  />
+) : (
+  <img
+    src={data.gallery[selectedImage].full}
+    className="aspect-square object-contain rounded-lg shadow-2xl"
+    alt="Full Resolution View"
+  />
+)}
             </motion.div>
           </motion.div>
         )}

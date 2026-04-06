@@ -18,7 +18,9 @@ const Graphic = () => {
     "Products",
     "education",
     "printing",
-    "Menu"
+    "Menu",
+    "Scanner"
+
   ];
 
   const data = [
@@ -144,6 +146,8 @@ const Graphic = () => {
       category: "Visiting Cards",
       coverImg: "/Images/portfolio/visitingcard/3.webp",
       gallery: [
+        { type: "image", url: "/Images/portfolio/graphic/visitingcard/10.webp" },
+       
         { type: "image", url: "/Images/portfolio/graphic/label/11.webp" },
         { type: "image", url: "/Images/portfolio/graphic/visitingcard/1.webp" },
         // { type: "image", url: "/Images/portfolio/graphic/visitingcard/2.webp" },
@@ -204,6 +208,8 @@ const Graphic = () => {
       category: "Logo/Brochure/Catalogue",
       coverImg: "/Images/portfolio/packaging/3.webp",
       gallery: [
+
+
         { type: "image", url: "/Images/portfolio/graphic/product/saajriwaaj.webp" },
         { type: "image", url: "/Images/portfolio/graphic/label/daf.webp" },
 
@@ -331,6 +337,7 @@ const Graphic = () => {
       category: "printing",
       coverImg: "/Images/work/Restaurants4.jpeg",
       gallery: [
+        { type: "image", url: "/Images/portfolio/graphic/label/leaflet.webp" }, 
        { type: "image", url: "/Images/portfolio/graphic/restraurant/21.webp" },
         { type: "image", url: "/Images/portfolio/graphic/restraurant/22.webp" },
         { type: "image", url: "/Images/portfolio/graphic/restraurant/23.webp" },
@@ -338,6 +345,9 @@ const Graphic = () => {
         { type: "image", url: "/Images/portfolio/graphic/restraurant/25.webp" },
         { type: "image", url: "/Images/portfolio/graphic/restraurant/26.webp" },
         { type: "image", url: "/Images/portfolio/graphic/restraurant/27.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/label/banner.webp"},
+        { type: "image", url: "/Images/portfolio/graphic/label/banner1.webp" }, 
+
         { type: "image", url: "/Images/portfolio/graphic/restraurant/28.webp" },
       ],
     },
@@ -349,6 +359,13 @@ const Graphic = () => {
         {type:"iframe", fullurl:"https://online.fliphtml5.com/jbrzt/Shaurya-Menu-compressed/",url:"/Images/thumbnail/oasis5.webp" },
         
     
+    ]
+    },
+       { id: 13,
+      category: "Scanner",
+    gallery: [
+       { type: "image", url: "/Images/portfolio/graphic/label/scanner.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/label/scanner1.webp" },
     ]
     }
   ];
