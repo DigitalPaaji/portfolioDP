@@ -11,27 +11,24 @@ const data = {
     coverImg: "/Images/portfolio/website/cover.webp",
     gallery: [
       { 
-        thumb: "/Images/portfolio/website/1.webp", // Usually a cropped/smaller version
+        thumb: "/Images/portfolio/website/m.webp", // Usually a cropped/smaller version
         full: "/Images/portfolio/website/1.webp"   // The full high-res design
       },
       { 
-        thumb: "/Images/portfolio/website/7.webp", 
+        thumb: "/Images/portfolio/website/sms.webp", 
         full: "/Images/portfolio/website/7.webp" 
       },
       { 
-        thumb: "/Images/portfolio/website/9.webp", 
+        thumb: "/Images/portfolio/website/p.webp", 
         full: "/Images/portfolio/website/9.webp" 
       },
-      { 
-        thumb: "/Images/portfolio/website/10.webp", 
-        full: "/Images/portfolio/website/10.webp" 
-      },
+   
       { 
         thumb: "/Images/portfolio/website/11.webp", 
         full: "/Images/portfolio/website/11.webp" 
       },
       { 
-        thumb: "/Images/portfolio/website/12.webp", 
+        thumb: "/Images/portfolio/website/sr.webp", 
         full: "/Images/portfolio/website/12.webp" 
       },
       { 
@@ -57,6 +54,10 @@ const data = {
       { 
         thumb: "/Images/portfolio/website/6.webp", 
         full: "/Images/portfolio/website/6.webp" 
+      },
+         { 
+        thumb: "/Images/portfolio/website/10.webp", 
+        full: "/Images/portfolio/website/10.webp" 
       },
     ],
   };

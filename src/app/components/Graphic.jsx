@@ -319,6 +319,11 @@ const Graphic = () => {
         { type: "image", url: "/Images/portfolio/graphic/education/1.webp" },
         { type: "image", url: "/Images/portfolio/graphic/education/2.webp" },
         { type: "image", url: "/Images/portfolio/graphic/education/3.webp" },
+          { type: "image", url: "/Images/portfolio/graphic/education/4.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/education/5.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/education/6.webp" },
+          { type: "image", url: "/Images/portfolio/graphic/education/7.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/education/8.webp" },
       ],
     },
      {
