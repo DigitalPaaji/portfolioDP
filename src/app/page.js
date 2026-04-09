@@ -1,13 +1,13 @@
 "use client";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 // Load AnalyticsScripts only on client
-const AnalyticsScripts = dynamic(() => import("./AnalyticsScripts"), {
-  ssr: false,
-});
+// const AnalyticsScripts = dynamic(() => import("./AnalyticsScripts"), {
+//   ssr: false,
+// });
 
 const DigitalPaajiHero = () => {
   const portfolioImages = [
@@ -26,7 +26,7 @@ const DigitalPaajiHero = () => {
 
   return (
     <>
-    <AnalyticsScripts />
+    {/* <AnalyticsScripts /> */}
     <section className="relative min-h-screen w-full bg-[#03030379] text-white overflow-hidden font-sans flex flex-col justify-center items-center">
       <div className="absolute inset-0 z-0 flex items-center opacity-30 pointer-events-none">
         <motion.div 

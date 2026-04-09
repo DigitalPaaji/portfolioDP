@@ -506,7 +506,7 @@ const Graphic = () => {
                     selectedImage
                   ].fullurl}
                       className="w-full h-full bg-black"
-                   title="Food Menu Black" seamless="seamless" scrolling="no" frameBorder="0" allowtransparency="true" allowfullscreen="true"
+                   title="Food Menu Black" seamless="seamless" scrolling="no" frameBorder="0" allowtransparency="true" allowfullScreen="true"
                     /> }
                   
                   

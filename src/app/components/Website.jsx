@@ -152,7 +152,7 @@ const data = {
               {/* SHOW THUMBNAIL IMAGE HERE */}
               <img
                 src={asset.thumb} 
-                className="w-full h-64 object-cover md:grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-auto lg:h-64 object-cover md:grayscale group-hover:grayscale-0 transition-all duration-700"
                 alt={`Thumbnail ${index + 1}`}
                 loading="lazy"
               />
@@ -168,7 +168,67 @@ const data = {
       </div>
 
       {/* FULL SCREEN MODAL */}
-      <AnimatePresence>
+{/* FULL SCREEN MODAL */}
+<AnimatePresence>
+  {selectedImage !== null && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[9999] w-full h-screen flex items-center justify-center bg-black/95 backdrop-blur-xl p-2 sm:p-4"
+      onClick={() => setSelectedImage(null)}
+    >
+      {/* Close Button - Smaller on mobile */}
+      <button 
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/60 hover:text-white z-[10000] bg-white/10 p-2 sm:p-3 rounded-full transition-colors"
+        onClick={() => setSelectedImage(null)}
+      >
+        <X size={24} className="sm:w-8 sm:h-8" />
+      </button>
+
+      {/* Navigation Buttons - Hidden or smaller on very small screens if needed */}
+      <button 
+        className="absolute left-2 sm:left-6 text-white/60 hover:text-white z-[10000] bg-white/10 p-2 sm:p-3 rounded-full" 
+        onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+      >
+        <StepBack size={20} className="sm:w-6 sm:h-6" />
+      </button>
+      
+      <button 
+        className="absolute right-2 sm:right-6 text-white/60 hover:text-white z-[10000] bg-white/10 p-2 sm:p-3 rounded-full" 
+        onClick={(e) => { e.stopPropagation(); handleNext(); }}
+      >
+        <StepForward size={20} className="sm:w-6 sm:h-6" />
+      </button>
+    
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="relative w-full h-full flex justify-center items-center"
+        onClick={(e) => e.stopPropagation()} 
+      >
+        {data.gallery[selectedImage].type === "pdf" ? (
+          <div className="w-full h-full max-w-4xl max-h-[75vh] sm:max-h-[85vh] flex items-center justify-center">
+            <iframe
+              /* view=FitH ensures the PDF fits the width of the container */
+              src={`${data.gallery[selectedImage].full}#view=FitH&toolbar=0&navpanes=0`} 
+              className="w-full h-full rounded-lg shadow-2xl bg-white"
+              title="PDF Viewer"
+            />
+          </div>
+        ) : (
+          <img
+            src={data.gallery[selectedImage].full}
+            className="max-w-full max-h-[80vh] sm:max-h-[85vh] object-contain rounded-lg shadow-2xl"
+            alt="Full Resolution View"
+          />
+        )}
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+      {/* <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -177,7 +237,7 @@ const data = {
             className="fixed inset-0 z-[9999] w-full h-screen flex items-center justify-center bg-black/95 backdrop-blur-xl"
             onClick={() => setSelectedImage(null)}
           >
-            {/* Close Button */}
+
             <button 
               className="absolute top-6 right-6 text-white/60 hover:text-white z-50 bg-white/10 p-3 rounded-full"
               onClick={() => setSelectedImage(null)}
@@ -185,7 +245,7 @@ const data = {
               <X size={32} />
             </button>
 
-            {/* Navigation Buttons */}
+   
             <button className="absolute top-1/2 left-6 text-white/60 hover:text-white z-50 bg-white/10 p-3 rounded-full" onClick={handlePrev}>
               <StepBack size={25} />
             </button>
@@ -200,12 +260,12 @@ const data = {
               className="relative w-full h-full max-w-5xl flex justify-center items-center p-4"
               onClick={(e) => e.stopPropagation()} 
             >
-              {/* SHOW FULL IMAGE HERE */}
-              {/* <img
-                src={data.gallery[selectedImage].full}
-                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
-                alt="Full Resolution View"
-              /> */}
+           
+              //  <img
+              //   src={data.gallery[selectedImage].full}
+              //   className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              //   alt="Full Resolution View"
+              // /> 
               {data.gallery[selectedImage].type === "pdf" ? (
   <iframe
     src={`${data.gallery[selectedImage].full}#toolbar=0`} 
@@ -221,12 +281,15 @@ const data = {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };
 
 export default Website;
+
+
+
 // "use client";
 
 // import React, { useEffect, useState } from 'react';
