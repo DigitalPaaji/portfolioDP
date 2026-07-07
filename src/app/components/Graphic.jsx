@@ -298,6 +298,13 @@ const Graphic = () => {
       category: "Products",
       coverImg: "/Images/work/Restaurants4.jpeg",
       gallery: [
+         { type: "image", url: "/Images/portfolio/graphic/product/sr.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/product/2kahumbo.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/product/3kahumbo.webp" },
+        { type: "image", url: "/Images/portfolio/graphic/product/4kahumbo.webp" },
+ 
+
+
         {
           type: "image",
           url: "/Images/portfolio/graphic/product/mubasa1.webp",

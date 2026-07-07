@@ -113,8 +113,8 @@ const DigitalPaajiHero = () => {
               <div className="absolute inset-0  bg-[#cc5f4d]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div  className=" cursor-pointer relative z-10 flex items-center gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.3em]">
-                <span>Start Exploring</span>
-                <ArrowRight size={18} className="text-[#cc5f4d] group-hover:translate-x-2 transition-transform duration-300" />
+                <span className="cursor-pointer ">Start Exploring</span>
+                <ArrowRight size={18} className="text-[#cc5f4d] group-hover:translate-x-2 transition-transform duration-100" />
               </div>
             </button>
           </Link>

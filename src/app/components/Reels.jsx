@@ -10,8 +10,10 @@ const [subcat,setSubcat]=useState("jewellery")
     "Restraunt/clubs",
     "educational",
     "electronics",
+    "creative",
     "Products",
     "Informational",
+    "Podcast",
     // "emotional marketing",
     "others"
   ];
@@ -23,8 +25,11 @@ const data = [
     category: "jewellery",
  
     gallery: [
-  //  {type:"video",url:"https://www.youtube.com/embed/6jiW_UAvE38",thumb:"saajriwaj1.webp"},
-  //  {type:"video",url:"https://www.youtube.com/embed/cURFsqcEY90",thumb:"saajriwaj4.webp"},
+  {type:"video",url:"https://www.youtube.com/embed/dXgou8a675g",thumb:"ds2.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/zMArB2ehgZ8",thumb:"sr.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/Ui4RVhiaJGQ",thumb:"ds1.webp"},
+  
+
    {type:"video",url:"https://www.youtube.com/embed/EckUSVS1pGM",thumb:"saajriwaj5.webp"},
    {type:"video",url:"https://www.youtube.com/embed/nvNhTDsACCw",thumb:"saajriwaj6.webp"},
    {type:"video",url:"https://www.youtube.com/embed/-i-bjTe0QL0",thumb:"saajriwaj7.webp"},
@@ -71,11 +76,29 @@ const data = [
    {type:"video",url:"https://www.youtube.com/embed/tBsGZrON6RA",thumb:"ibnta7.webp"},   
    {type:"video",url:"https://www.youtube.com/embed/J-xrMCtDCgU",thumb:"prodsol.webp"},
    {type:"video",url:"https://www.youtube.com/embed/5vZA4nP3Gp8",thumb:"bheems.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/Y5UhE-gcSMQ",thumb:"ibanta.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/6y3Eol0xmSc",thumb:"prodsol1.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/A8mVYmS83gQ",thumb:"mubasa.webp"},
+
    
     
       
     ],
   },
+  {
+    id: 4,
+    category: "creative",
+ 
+    gallery: [
+   {type:"video",url:"https://www.youtube.com/embed/u4Yt3zMVArA",thumb:"sneha.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/ym99AZ_o9O8",thumb:"creator.webp"},
+
+   
+    
+      
+    ],
+  },
+  
 
  {
     id: 3,
@@ -146,9 +169,18 @@ gallery: [
        {type:"video",url:"https://www.youtube.com/embed/FnBcFy68r0w" ,thumb:"fire2.webp"}, 
     ],
   },
+     {
+    id: 7,
+    category: "Podcast",
+ 
+    gallery: [
+      //  {type:"video",url:"https://www.youtube.com/embed/sohORG5GX5c" ,thumb:"education3.webp"}, 
+       {type:"video",url:"https://www.youtube.com/embed/muCoTPQMV2A" ,thumb:"podcast.webp"}, 
+    ],
+  },
 
 ]
-
+ 
   
  const getModalVideoUrl = (url) => {
     if (url.includes("youtube.com") || url.includes("youtu.be")) {

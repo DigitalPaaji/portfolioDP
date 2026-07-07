@@ -15,14 +15,19 @@ const Bni = () => {
 
   /* ---------------- GRAPHICS ---------------- */
   const graphics = [
+     "/Images/portfolio/BNI/b7.webp",
+    "/Images/portfolio/BNI/b8.webp",
+    "/Images/portfolio/BNI/b9.webp",
+    "/Images/portfolio/BNI/b10.webp",
+    "/Images/portfolio/BNI/b11.webp",
     "/Images/portfolio/BNI/b1.webp",
     "/Images/portfolio/BNI/b2.webp",
     "/Images/portfolio/BNI/b3.webp",
     "/Images/portfolio/BNI/b4.webp",
     "/Images/portfolio/BNI/b5.webp",
     "/Images/portfolio/BNI/b6.webp",
-    "/Images/portfolio/BNI/b7.webp",
-    "/Images/portfolio/BNI/b8.webp",
+    "/Images/portfolio/BNI/b12.webp",
+    "/Images/portfolio/BNI/b13.webp",
   ];
 
   /* ---------------- VIDEOS ---------------- */
@@ -38,10 +43,48 @@ const Bni = () => {
       landscape: true,
     },
     {
-        // type: "video",
-        url: "https://www.youtube.com/embed/H68ev8JVrIg",
-        thumb: "/Images/thumbnail/bni1.webp",
-      },
+      // type: "video",
+      url: "https://www.youtube.com/embed/H68ev8JVrIg",
+      thumb: "/Images/thumbnail/bni1.webp",
+    },
+    
+    
+    
+    
+    
+    
+    
+    {
+      url: "https://youtube.com/shorts/jcHNyBL-aAE",
+      thumb: "/Images/thumbnail/bni5.webp",
+      landscape: false,
+    },
+    {
+      url: "https://youtube.com/shorts/Ajr12pMU3II",
+      thumb: "/Images/thumbnail/bni4.webp",
+      landscape: true,
+    },
+    {
+      // type: "video",
+      url: "https://www.youtube.com/embed/nMmyBwJs9a8",
+      thumb: "/Images/thumbnail/bni1.webp",
+    },
+
+            {
+      url: "https://youtube.com/shorts/ANZCAujvJNE",
+      thumb: "/Images/thumbnail/bni2.webp",
+      landscape: false,
+    },
+    {
+      url: "https://youtube.com/shorts/CCA0UDawy2Q",
+      thumb: "/Images/thumbnail/bni6.webp",
+      landscape: true,
+    },
+    {
+      // type: "video",
+      url: "https://www.youtube.com/embed/nMmyBwJs9a8",
+      thumb: "/Images/thumbnail/bni3.webp",
+    },
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -220,9 +263,7 @@ const Bni = () => {
         )}
       </AnimatePresence>
 
-      {/* ================================================= */}
-      {/* ================= VIDEO MODAL ================== */}
-      {/* ================================================= */}
+
       <AnimatePresence>
         {selectedVideo !== null && (
           <motion.div

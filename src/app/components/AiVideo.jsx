@@ -10,6 +10,9 @@ const AiVideo = () => {
     category: "AI Videos",
     coverImg: "/Images/portfolio/ai/cover.gif",
     gallery: [
+      { type: "video", url: "https://www.youtube.com/embed/UUgI6MUVAGM", thumb: "daf2.webp" },
+      { type: "video", url: "https://www.youtube.com/embed/oHnT1MlWGAM", thumb: "daf1.webp" },
+      { type: "video", url: "https://www.youtube.com/embed/zMArB2ehgZ8", thumb: "sr.webp" },     
       { type: "video", url: "https://www.youtube.com/embed/hSVONZ8aULc", thumb: "ai4.webp" },
       { type: "video", url: "https://www.youtube.com/embed/TpmoYQyJ2CQ", thumb: "ai1.webp" },
       { type: "video", url: "https://www.youtube.com/embed/3DqIN3n3CO0", client: "ibanta", thumb: "ibnta1.webp" },
@@ -183,7 +186,7 @@ const handleNext = (e) => {
                   {(aivideos.gallery[selectedAsset].url.includes("youtube.com") || aivideos.gallery[selectedAsset].url.includes("instagram.com")) ? (
                     <iframe
                       src={getModalVideoUrl(aivideos.gallery[selectedAsset].url)}
-                      className="w-full h-full"
+                      className="w-full h-full aspect-square"
                       allow="autoplay; encrypted-media; picture-in-picture"
                       allowFullScreen
                     />
