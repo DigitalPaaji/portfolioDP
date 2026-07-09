@@ -30,6 +30,16 @@ const Presentations = () => {
         url: "https://www.youtube.com/embed/sQB8aZIg2_k",
         thumb: "paaji1.webp",
       },
+  {
+        type: "video",
+        url: "https://www.youtube.com/embed/2Ots7seTBzM",
+        thumb: "electronic3.webp",
+      },
+  {
+        type: "video",
+        url: "https://www.youtube.com/embed/aiYW0XayqZw",
+        thumb: "mtat1.webp",
+      },
   
 
       

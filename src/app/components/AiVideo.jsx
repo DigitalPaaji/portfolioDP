@@ -29,6 +29,7 @@ const AiVideo = () => {
       { type: "video", url: "https://www.youtube.com/embed/A67jLML8c6Y", thumb: "saajriwaj2.webp" },
       {type:"video",url:"https://www.youtube.com/embed/kAsUuGOfO6Q",thumb:"murgi1.webp"},
       {type:"video",url:"https://www.youtube.com/embed/7xCRhzA8ICc",thumb:"saajriwaj3.webp"},
+      {type:"video",url:"https://www.youtube.com/embed/n1srsLG02_Q",thumb:"canco1.webp"},
       
     ],
   };

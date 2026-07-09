@@ -85,8 +85,61 @@ const Bni = () => {
       url: "https://www.youtube.com/embed/nMmyBwJs9a8",
       thumb: "/Images/thumbnail/bni3.webp",
     },
+    
+    
+    
+    
+    {
+      // type: "video",
+      url: "https://www.youtube.com/embed/r9KkepYxLPg",
+      thumb: "/Images/thumbnail/bni7.webp",
+    },
+    
+    {
+      url: "https://www.youtube.com/embed/Oogjo4gj3Xo",
+      thumb: "/Images/thumbnail/bni8.webp",
+    },
+    
+    {
+      url: "https://www.youtube.com/embed/e-H1nrWi710",
+      thumb: "/Images/thumbnail/bni9.webp",
+    },
+    {
+      url: "https://www.youtube.com/embed/xQ7eOpuH02w",
+      thumb: "/Images/thumbnail/bni10.webp",
+    },
+    {
+      url: "https://www.youtube.com/embed/qYwBFXYXLKA",
+      thumb: "/Images/thumbnail/bni11.webp",
+    },
+    {
+      url: "https://www.youtube.com/embed/cv0Lb95nYIg",
+      thumb: "/Images/thumbnail/bni12.webp",
+    },
+    
+    {
+      url: "https://www.youtube.com/embed/JJayr0Z-KKc",
+      thumb: "/Images/thumbnail/bni13.webp",
+    },
+    {
+      url: "https://www.youtube.com/embed/2dulYQaU1d0",
+      thumb: "/Images/thumbnail/bni14.webp",
+    },
+    {
+      url: "https://www.youtube.com/embed/kJnkWgwdfXY",
+      thumb: "/Images/thumbnail/bni15.webp",
+    },
+    {
+      url: "https://www.youtube.com/embed/49zZv33bH9Q",
+      thumb: "/Images/thumbnail/bni16.webp",
+    },
+    {
+      url: "https://youtube.com/shorts/VvcVufOBtTE",
+      thumb: "/Images/thumbnail/bni17.webp",
+      landscape: true,
+    },
   ];
-
+  
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
 

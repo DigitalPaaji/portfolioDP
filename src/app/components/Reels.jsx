@@ -36,6 +36,7 @@ const data = [
    {type:"video",url:"https://www.youtube.com/embed/MvkVt29bQXI",thumb:"saajriwaj8.webp"},
    {type:"video",url:"https://www.youtube.com/embed/S3NP3KMNQco",thumb:"saajriwaj9.webp"},
    {type:"video",url:"https://www.youtube.com/embed/b3of7BJ9s0g",thumb:"saajriwaj10.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/_V87qGHPnrU",thumb:"dhera.webp"},
   //  {type:"video",url:"https://www.youtube.com/embed/EckUSVS1pGM",thumb:"saajriwaj1.webp"}
       
     ],
@@ -79,6 +80,7 @@ const data = [
    {type:"video",url:"https://www.youtube.com/embed/Y5UhE-gcSMQ",thumb:"ibanta.webp"},
    {type:"video",url:"https://www.youtube.com/embed/6y3Eol0xmSc",thumb:"prodsol1.webp"},
    {type:"video",url:"https://www.youtube.com/embed/A8mVYmS83gQ",thumb:"mubasa.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/vFi_65wqy6s",thumb:"jamun.webp"},
 
    
     
@@ -92,6 +94,9 @@ const data = [
     gallery: [
    {type:"video",url:"https://www.youtube.com/embed/u4Yt3zMVArA",thumb:"sneha.webp"},
    {type:"video",url:"https://www.youtube.com/embed/ym99AZ_o9O8",thumb:"creator.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/n6LxJLOHp-4",thumb:"creator1.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/u1pQsiMfyZo",thumb:"creator2.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/Hrri1fk8vMI",thumb:"creator3.webp"},
 
    
     
@@ -123,6 +128,7 @@ gallery: [
       //  {type:"video",url:"https://www.youtube.com/embed/Tn-L67kSHzw",thumb:"education1.webp"},
   
       //  {type:"video",url:"https://www.youtube.com/embed/iqE99DiQuks",thumb:"club1.webp"},
+        {type:"video",url:"https://www.youtube.com/embed/3i8yd8Xl26w",thumb:"daawath4.webp"},
         {type:"video",url:"https://www.youtube.com/embed/m-DFNY8qOkI",thumb:"club2.webp"},
         {type:"video",url:"https://www.youtube.com/embed/uy3KuuR09jE",thumb:"club3.webp"},
         {type:"video",url:"https://www.youtube.com/embed/-u3dwXRxqV8",thumb:"daawath1.webp"},
@@ -158,6 +164,8 @@ gallery: [
        {type:"video",url:"https://www.youtube.com/embed/aVmVDAHY6M8",thumb:"education12.webp"},
        {type:"video",url:"https://www.youtube.com/embed/Zds2wF4NHY4",thumb:"education13.webp"},
        {type:"video",url:"https://www.youtube.com/embed/Gz2Uzu6BRTA",thumb:"education14.webp"},
+       {type:"video",url:"https://www.youtube.com/embed/Oc8ip1kRDHM",thumb:"education15.webp"},
+       {type:"video",url:"https://www.youtube.com/embed/kKGhqjULoKU",thumb:"education16.webp"},
     ],
   },
    {
@@ -176,6 +184,7 @@ gallery: [
     gallery: [
       //  {type:"video",url:"https://www.youtube.com/embed/sohORG5GX5c" ,thumb:"education3.webp"}, 
        {type:"video",url:"https://www.youtube.com/embed/muCoTPQMV2A" ,thumb:"podcast.webp"}, 
+       {type:"video",url:"https://www.youtube.com/embed/Jh5WkDcqs_c" ,thumb:"podcast1.webp"}, 
     ],
   },
 
