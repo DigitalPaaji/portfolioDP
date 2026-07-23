@@ -37,6 +37,8 @@ const data = [
    {type:"video",url:"https://www.youtube.com/embed/S3NP3KMNQco",thumb:"saajriwaj9.webp"},
    {type:"video",url:"https://www.youtube.com/embed/b3of7BJ9s0g",thumb:"saajriwaj10.webp"},
    {type:"video",url:"https://www.youtube.com/embed/_V87qGHPnrU",thumb:"dhera.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/3HNpnKkzgOs",thumb:"dhera1.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/Yy8AMP8ijnI",thumb:"dhera2.webp"},
   //  {type:"video",url:"https://www.youtube.com/embed/EckUSVS1pGM",thumb:"saajriwaj1.webp"}
       
     ],
@@ -81,6 +83,12 @@ const data = [
    {type:"video",url:"https://www.youtube.com/embed/6y3Eol0xmSc",thumb:"prodsol1.webp"},
    {type:"video",url:"https://www.youtube.com/embed/A8mVYmS83gQ",thumb:"mubasa.webp"},
    {type:"video",url:"https://www.youtube.com/embed/vFi_65wqy6s",thumb:"jamun.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/juXcjqmaEbI",thumb:"ibnta8.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/rk3YWVlWWxk",thumb:"kumbo1.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/ym6BD7AuIW8 ",thumb:"murgi4.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/TXXRUv0vyrY ",thumb:"jaggi1.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/h6GSf-CmMVoS ",thumb:"daf3.webp"},
+
 
    
     
@@ -97,6 +105,7 @@ const data = [
    {type:"video",url:"https://www.youtube.com/embed/n6LxJLOHp-4",thumb:"creator1.webp"},
    {type:"video",url:"https://www.youtube.com/embed/u1pQsiMfyZo",thumb:"creator2.webp"},
    {type:"video",url:"https://www.youtube.com/embed/Hrri1fk8vMI",thumb:"creator3.webp"},
+   {type:"video",url:"https://www.youtube.com/embed/AqEBtDIDLPQ",thumb:"creator4.webp"},
 
    
     
@@ -112,6 +121,7 @@ gallery: [
           {type:"video",url:"https://www.youtube.com/embed/-JKp6RBS6K4" ,thumb:"sellgo1.webp"}, 
           {type:"video",url:"https://www.youtube.com/embed/ABZ_C_THkdk" ,thumb:"sellgo2.webp"}, 
           {type:"video",url:"https://www.youtube.com/embed/_AxNIhQtdxc" ,thumb:"fire1.webp"}, 
+          {type:"video",url:"https://www.youtube.com/embed/9P97hegiDJU" ,thumb:"tj1.webp"}, 
         
 
 
