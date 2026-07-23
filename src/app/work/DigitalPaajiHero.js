@@ -30,10 +30,10 @@ const searchParams = useSearchParams();
   const services = [
     "AI Videos",
     "Video Presentations",
-
     "Reels Creation",
     "Animation",
     "Graphic",
+"Product Shoot",
     "Website UI/UX",
     // "Menu Cards",
     "BNI"
@@ -246,6 +246,8 @@ const searchParams = useSearchParams();
               {select === "Website UI/UX" && <Website />}
               {select === "Menu Cards" && <Ads />}
               {select === "Graphic" && <Graphic />}
+              {/* {select === "Product" && <Product />} */}
+
               {select === "BNI" && <Bni />}
     
               {select === "Reels Creation" && <Reels /> }

@@ -1,23 +1,3 @@
-// import "./globals.css";
-
-// export const metadata = {
-//   icons: {
-//     icon: "/favicon.ico",
-//     shortcut: "/favicon.png",
-//   },
-// };
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <head />
-//       <body className="bg-black">
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
-
 import Script from "next/script";
 import "./globals.css";
 
